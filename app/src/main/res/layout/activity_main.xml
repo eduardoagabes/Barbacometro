@@ -3,18 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/pink"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/title_label"
-        android:textColor="@color/yellow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Barbacometro"
+        android:textColor="@color/skin"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,56 +25,70 @@
         android:id="@+id/til_adultos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:hintEnabled="false"
-        app:startIconDrawable="@drawable/ic_adulto"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/title_label">
+        app:boxBackgroundColor="@color/peach"
+        app:boxStrokeColor="@color/skin"
+        app:cursorColor="@color/skin"
+        app:hintEnabled="false"
+        app:layout_constraintTop_toBottomOf="@+id/title_label"
+        app:startIconDrawable="@drawable/ic_adulto">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tie_adultos"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número de adultos"
             android:inputType="number"
             android:maxLength="3"
-            android:layout_height="wrap_content"
-            android:hint="Número de adultos" />
+            android:textColor="@color/skin"
+            android:textColorHint="@color/skin" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_ninos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:startIconDrawable="@drawable/ic_nino"
-        app:hintEnabled="false"
         android:layout_margin="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/til_adultos">
+        app:boxBackgroundColor="@color/peach"
+        app:boxStrokeColor="@color/skin"
+        app:cursorColor="@color/skin"
+        app:hintEnabled="false"
+        app:layout_constraintTop_toBottomOf="@+id/til_adultos"
+        app:startIconDrawable="@drawable/ic_nino">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tie_ninos"
-            android:inputType="number"
-            android:maxLength="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Número de niños" />
+            android:hint="Número de niños"
+            android:inputType="number"
+            android:textColor="@color/skin"
+            android:textColorHint="@color/skin" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_duracion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:startIconDrawable="@drawable/ic_duracion"
-        app:hintEnabled="false"
         android:layout_margin="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/til_ninos">
+        app:boxBackgroundColor="@color/peach"
+        app:boxStrokeColor="@color/skin"
+        app:cursorColor="@color/skin"
+        app:hintEnabled="false"
+        app:layout_constraintTop_toBottomOf="@+id/til_ninos"
+        app:startIconDrawable="@drawable/ic_duracion">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tie_duracion"
-            android:maxLength="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Duración de la barbacoa (En horas)"
             android:inputType="numberDecimal"
-            android:hint="Duración de la barbacoa (En horas)" />
+            android:maxLength="3"
+            android:textColor="@color/skin"
+            android:textColorHint="@color/skin" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -82,14 +96,23 @@
         android:id="@+id/btn_calcular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
         android:layout_margin="16dp"
-        android:textColor="@color/yellow"
-        android:backgroundTint="@color/sage"
+        android:backgroundTint="@color/skin"
         android:text="Calcular"
+        android:textColor="@color/pink"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/til_duracion" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/ic_bbq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_calcular" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

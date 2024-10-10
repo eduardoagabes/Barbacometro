@@ -2,6 +2,8 @@
 <resources>
     <color name="black">#45474B</color>
     <color name="white">#F5F7F8</color>
-    <color name="sage">#495E57</color>
-    <color name="yellow">#F4CE14</color>
+    <color name="pink">#FFE3E1</color>
+    <color name="peach">#FFD1D1</color>
+    <color name="skin">#FF9494</color>
+
 </resources>

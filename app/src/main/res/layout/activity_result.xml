@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/pink"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ResultActivity">
@@ -11,6 +12,7 @@
         android:id="@+id/title_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/skin"
         android:layout_marginTop="16dp"
         android:text="Barbacometro"
         android:textSize="32sp"
@@ -20,28 +22,32 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/ic_carne"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:src="@drawable/ic_carne"
         android:layout_marginStart="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_ctd_carne_label" />
+        app:layout_constraintTop_toTopOf="@+id/tv_ctd_carne_label"
+         />
 
     <TextView
         android:id="@+id/tv_ctd_carne_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#FFB6B9"
         android:layout_margin="64dp"
         android:text="Cantidad de carne (Kg):"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/ic_carne"
         app:layout_constraintTop_toBottomOf="@+id/title_label" />
 
     <TextView
         android:id="@+id/tv_ctd_carne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/skin"
         tools:text="6.500"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -63,6 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Cantidad de cerveza (Latas):"
+        android:textColor="#FFB6B9"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/tv_ctd_carne_label"
@@ -72,6 +79,7 @@
         android:id="@+id/tv_ctd_cerveza"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/skin"
         tools:text="24"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -92,6 +100,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cantidad de refresco (Litros):"
+        android:textColor="#FFB6B9"
         android:layout_marginTop="24dp"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -102,6 +111,7 @@
         android:id="@+id/tv_ctd_refresco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/skin"
         tools:text="6"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -113,10 +123,23 @@
         android:id="@+id/btn_nuevo_calculo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/skin"
+        android:textColor="@color/pink"
         android:text="Nuevo cálculo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_ctd_refresco_label" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/ic_bbq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_nuevo_calculo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
